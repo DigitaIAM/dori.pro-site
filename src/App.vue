@@ -260,7 +260,7 @@ const submitForm = async () => {
           </p>
 
           <h1 class="mt-7 max-w-2xl text-[3.1rem] font-medium leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-[4.6rem]">
-            Единое цифровое ядро <span class="text-brand">для аптечной сети</span>
+            Единое цифровое ядро <span class="text-brand">управления аптечной сетью</span>
           </h1>
 
           <p class="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
