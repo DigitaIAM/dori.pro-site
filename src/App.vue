@@ -2,12 +2,12 @@
 import { ref, watch, computed, nextTick, onMounted, onBeforeUnmount } from 'vue'
 
 const navLinks = [
-  { label: 'Продукты', href: '#products' },
+  { label: 'О системе', href: '#products' },
   { label: 'Преимущества', href: '#features' },
   { label: 'Проблемы и решения', href: '#problems' },
 ]
 
-const industries = ['Фармацевтики', 'Логистики', 'Ритейла', 'B2B-сервисов']
+const industries = ['Аптечных сетей', 'Фармацевтики', 'Ритейла', 'Дистрибуции']
 
 const mobileMenuOpen = ref(false)
 const closeMobileMenu = () => {
@@ -31,7 +31,6 @@ watch(activeProject, (project) => {
 })
 
 const projectLabels = {
-  trucks: 'Логистика & TMS',
   dori: 'Фармацевтика & Ритейл',
 }
 const projectLabel = computed(() => projectLabels[activeProject.value] || '')
@@ -65,7 +64,7 @@ const features = [
   },
   {
     title: 'Автоматизация расчётов',
-    text: 'Забудьте про ошибки ручного счёта в Excel. Выплаты водителям, комиссии диспетчеров, сверки, факторинг и зарплаты формируются автоматически.',
+    text: 'Забудьте про ошибки ручного счёта в Excel. Взаиморасчёты с поставщиками, сверки, бонусы и финансовые итоги формируются автоматически.',
     accent: 'brand',
     icon: 'M4 19V5M4 19h16M8 15l3-4 3 2 4-6',
   },
@@ -189,7 +188,7 @@ const submitForm = async () => {
       <div class="site-container flex h-20 items-center justify-between">
         <a href="#" class="flex items-center gap-3" @click="closeMobileMenu">
           <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-ink text-sm font-semibold text-white">D</span>
-          <span class="text-lg font-semibold tracking-tight text-ink">DigitaIAM<span class="text-brand">.</span></span>
+          <span class="text-lg font-semibold tracking-tight text-ink">Dori<span class="text-brand">.pro</span></span>
         </a>
 
         <nav class="hidden items-center gap-8 lg:flex">
@@ -257,15 +256,15 @@ const submitForm = async () => {
         <div>
           <p class="inline-flex items-center gap-2 rounded-full border border-line bg-white/70 px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.16em] text-muted">
             <span class="h-1.5 w-1.5 rounded-full bg-brand"></span>
-            Корпоративные системы
+            Управление аптечной сетью
           </p>
 
           <h1 class="mt-7 max-w-2xl text-[3.1rem] font-medium leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-[4.6rem]">
-            Единое цифровое ядро <span class="text-brand">для бизнеса</span>
+            Единое цифровое ядро <span class="text-brand">для аптечной сети</span>
           </h1>
 
           <p class="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            Тотальный перекрестный контроль персонала и всех процессов от закупа до касс. Предотвращает ошибки персонала. Позволяет работать с неквалифицированным персоналом без долгих месяцев обучения. Полная прозрачность доходов, пересчет остатков в реальном времени и защита от потерь.
+            Dori.pro объединяет кассу, склад, закупки, логистику и руководство в одном цифровом контуре: автоматическое распределение товара по FEFO, контроль сроков годности, точные остатки и отчёты в реальном времени.
           </p>
 
           <div class="mt-9 flex flex-wrap items-center gap-4">
@@ -286,8 +285,8 @@ const submitForm = async () => {
               <p class="mt-1 text-xs text-muted">в облаке</p>
             </div>
             <div>
-              <p class="text-xl font-medium tracking-tight">2</p>
-              <p class="mt-1 text-xs text-muted">флагманских продукта</p>
+              <p class="text-xl font-medium tracking-tight">FEFO</p>
+              <p class="mt-1 text-xs text-muted">контроль сроков</p>
             </div>
             <div>
               <p class="text-xl font-medium tracking-tight">Real-time</p>
@@ -302,7 +301,7 @@ const submitForm = async () => {
             <div class="flex items-center justify-between border-b border-line px-4 py-3 sm:px-5">
               <div class="flex items-center gap-2.5">
                 <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-ink text-[10px] font-semibold text-white">D</span>
-                <span class="text-xs font-medium text-ink">DigitaIAM · Обзор сети</span>
+                <span class="text-xs font-medium text-ink">Dori.pro · Обзор сети</span>
               </div>
               <span class="inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-[10px] text-muted">
                 <span class="h-1.5 w-1.5 rounded-full bg-sage-soft"></span>
@@ -438,21 +437,21 @@ const submitForm = async () => {
       </div>
     </section>
 
-    <!-- Продукты -->
+    <!-- Продукт -->
     <section id="products" class="border-b border-line bg-white py-24 lg:py-32">
       <div class="site-container">
         <div class="grid gap-8 lg:grid-cols-2 lg:items-end">
           <div>
-            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">Продукты</p>
-            <h2 class="mt-4 max-w-xl text-3xl font-medium leading-[1.05] tracking-[-0.035em] text-ink sm:text-4xl lg:text-5xl">Одна философия
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">Продукт</p>
+            <h2 class="mt-4 max-w-xl text-3xl font-medium leading-[1.05] tracking-[-0.035em] text-ink sm:text-4xl lg:text-5xl">Dori.pro
             </h2>
           </div>
           <p class="max-w-xl text-sm leading-relaxed text-muted lg:justify-self-end">
-            Мы заменяем ручной труд, таблицы Excel и хаос в процессах на умные алгоритмы. Каждый продукт решает конкретную задачу отрасли — без лишней сложности.
+            Единая система для управления аптечной сетью: от кассы и склада до закупок и аналитики — без ручного труда, таблиц Excel и хаоса в процессах.
           </p>
         </div>
 
-        <div class="mt-14 grid gap-5 lg:grid-cols-2">
+        <div class="mt-14 max-w-3xl">
           <!-- Dori.pro -->
           <article class="flex flex-col rounded-[24px] border border-line bg-white p-6 transition-colors hover:border-line-strong sm:p-8">
             <div class="flex items-start justify-between gap-4">
@@ -502,63 +501,6 @@ const submitForm = async () => {
                 type="button"
                 class="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-sage"
                 @click="openProject('dori')"
-              >
-                Подробнее о системе
-                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- Trucks.land -->
-          <article class="flex flex-col rounded-[24px] border border-line bg-white p-6 transition-colors hover:border-line-strong sm:p-8">
-            <div class="flex items-start justify-between gap-4">
-              <div class="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-brand-soft text-brand">
-                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z" />
-                  <circle cx="7" cy="17" r="1.5" />
-                  <circle cx="17.5" cy="17" r="1.5" />
-                </svg>
-              </div>
-              <span class="rounded-full border border-brand/20 bg-brand-soft px-3 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-brand">
-                Логистика & TMS
-              </span>
-            </div>
-
-            <h3 class="mt-6 text-2xl font-medium tracking-tight text-ink">
-              Trucks.land
-              <span class="mt-1 block text-base font-normal text-muted">Управление грузоперевозками</span>
-            </h3>
-
-            <p class="mt-4 text-sm leading-relaxed text-muted">
-              Облачная система для транспортных компаний: заказы, живой трекинг в реальном времени, автоматические расчеты с владельцами тягачей и диспетчерами, факторинг и строгая отчетность.
-            </p>
-
-            <ul class="mt-6 space-y-3 border-t border-line pt-6">
-              <li class="flex gap-3 text-sm leading-relaxed text-muted">
-                <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
-                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
-                </span>
-                Единое рабочее место для диспетчеров и руководства
-              </li>
-              <li class="flex gap-3 text-sm leading-relaxed text-muted">
-                <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
-                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
-                </span>
-                Живой дашборд статусов заказов и маршрутов
-              </li>
-              <li class="flex gap-3 text-sm leading-relaxed text-muted">
-                <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
-                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7" /></svg>
-                </span>
-                Автоматические расчеты зарплат, комиссий и выплат
-              </li>
-            </ul>
-
-            <div class="mt-auto pt-8">
-              <button
-                type="button"
-                class="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand"
-                @click="openProject('trucks')"
               >
                 Подробнее о системе
                 <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -751,17 +693,17 @@ const submitForm = async () => {
       <div class="site-container flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div class="flex items-center gap-3">
           <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-ink text-xs font-semibold text-white">D</span>
-          <span class="text-sm font-semibold tracking-tight text-ink">DigitaIAM<span class="text-brand">.</span></span>
+          <span class="text-sm font-semibold tracking-tight text-ink">Dori<span class="text-brand">.pro</span></span>
         </div>
 
         <nav class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
-          <a href="#products" class="transition hover:text-ink">Продукты</a>
+          <a href="#products" class="transition hover:text-ink">О системе</a>
           <a href="#features" class="transition hover:text-ink">Преимущества</a>
           <a href="#problems" class="transition hover:text-ink">Решения</a>
           <a href="#contact" class="transition hover:text-ink">Контакты</a>
         </nav>
 
-        <p class="text-xs text-soft">© 2026 DigitaIAM. Все права защищены.</p>
+        <p class="text-xs text-soft">© 2026 Dori.pro. Все права защищены.</p>
       </div>
     </footer>
 
@@ -787,87 +729,6 @@ const submitForm = async () => {
         </div>
 
         <div class="min-h-0 flex-1 overflow-y-auto px-5 py-6 sm:px-8 sm:py-8 lg:px-10">
-          <!-- ===================== TRUCKS.LAND ===================== -->
-          <div v-if="activeProject === 'trucks'">
-            <h2 class="text-2xl font-medium tracking-tight text-ink lg:text-3xl">Trucks.land — система управления грузоперевозками</h2>
-            <p class="mt-3 max-w-4xl text-sm leading-relaxed text-muted">
-              Облачная система (TMS) для управления транспортной компанией: заказы и перевозки, отслеживание статусов в реальном времени,
-              взаиморасчёты с владельцами тягачей и диспетчерами, а также прозрачная отчётность. Вся работа — в браузере, без установки, с любого устройства.
-            </p>
-
-            <div class="mt-8 border-t border-line">
-              <details class="group border-b border-line py-5" data-accordion>
-                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 sm:pointer-events-none [&::-webkit-details-marker]:hidden">
-                  <h4 class="text-sm font-semibold text-ink sm:text-base">Что система даёт клиенту</h4>
-                  <svg class="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180 sm:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-                </summary>
-                <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted marker:text-brand">
-                  <li>Единое рабочее место для диспетчеров, менеджеров, владельцев тягачей и руководства.</li>
-                  <li>Автоматизация расчётов вместо таблиц Excel: выплаты, комиссии, сверки и отчёты формируются автоматически.</li>
-                  <li>Контроль каждой перевозки: от создания заказа до его закрытия и оплаты.</li>
-                  <li>Работа в реальном времени: несколько организаций и сотрудников видят актуальные данные одновременно.</li>
-                </ul>
-              </details>
-
-              <details class="group border-b border-line py-5" data-accordion>
-                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 sm:pointer-events-none [&::-webkit-details-marker]:hidden">
-                  <h4 class="text-sm font-semibold text-ink sm:text-base">Для кого</h4>
-                  <svg class="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180 sm:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-                </summary>
-                <p class="mt-3 text-sm leading-relaxed text-muted">
-                  Для транспортных и логистических компаний: диспетчеры, менеджеры по перевозкам, владельцы тягачей, бухгалтерия и руководство.
-                  Начать работу просто — достаточно создать учётную запись и организацию.
-                </p>
-              </details>
-
-              <details class="group border-b border-line py-5" data-accordion>
-                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 sm:pointer-events-none [&::-webkit-details-marker]:hidden">
-                  <h4 class="text-sm font-semibold text-ink sm:text-base">Ключевые возможности</h4>
-                  <svg class="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180 sm:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-                </summary>
-                <div class="mt-4 grid gap-3 text-sm sm:grid-cols-2">
-                  <div class="rounded-xl border border-line bg-canvas p-4">
-                    <p class="font-semibold text-brand">Заказы и перевозки</p>
-                    <p class="mt-1.5 leading-relaxed text-muted">Создание и редактирование заказов: номер, брокер, вес, мили, стоимость, ставки. Гибкая система статусов и этапов. Комментарии, файлы, история изменений, поиск похожих загрузок и контроль согласований.</p>
-                  </div>
-                  <div class="rounded-xl border border-line bg-canvas p-4">
-                    <p class="font-semibold text-brand">Отслеживание в реальном времени</p>
-                    <p class="mt-1.5 leading-relaxed text-muted">Живой дашборд перевозок: текущий статус каждого заказа, время, цветовое выделение этапов. Фильтры по заказам, транспорту, водителям и статусам.</p>
-                  </div>
-                  <div class="rounded-xl border border-line bg-canvas p-4">
-                    <p class="font-semibold text-brand">Справочники</p>
-                    <p class="mt-1.5 leading-relaxed text-muted">Брокеры, владельцы тягачей, водители, транспорт, организации, сотрудники. Страховки по транспортному средству и водителю. Схемы комиссий и настройка тарифов.</p>
-                  </div>
-                  <div class="rounded-xl border border-line bg-canvas p-4">
-                    <p class="font-semibold text-brand">Платежи и взаиморасчёты</p>
-                    <p class="mt-1.5 leading-relaxed text-muted">Расчёты с владельцами тягачей, выплаты диспетчерам и сотрудникам. Штрафы, начисления, отсутствия, история найма. Контроль неоплаченных заказов и дебиторской задолженности.</p>
-                  </div>
-                  <div class="rounded-xl border border-line bg-canvas p-4">
-                    <p class="font-semibold text-brand">Отчёты и журналы</p>
-                    <p class="mt-1.5 leading-relaxed text-muted">Отчёты по владельцам и сотрудникам/диспетчерам, эффективность диспетчеров, экспорт в Excel и PDF, отправка документов на почту. Факторинг и экспресс-выплаты (quick pays).</p>
-                  </div>
-                  <div class="rounded-xl border border-line bg-canvas p-4">
-                    <p class="font-semibold text-brand">Кадры, задачи и безопасность</p>
-                    <p class="mt-1.5 leading-relaxed text-muted">Задачи и рабочий контроль, учёт рабочего времени, расчёт зарплаты. Мультитенантность и разграничение прав доступа между ролями.</p>
-                  </div>
-                </div>
-              </details>
-
-              <details class="group border-b border-line py-5" data-accordion>
-                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 sm:pointer-events-none [&::-webkit-details-marker]:hidden">
-                  <h4 class="text-sm font-semibold text-ink sm:text-base">Преимущества</h4>
-                  <svg class="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180 sm:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-                </summary>
-                <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted marker:text-brand">
-                  <li><b class="font-semibold text-ink">Облако</b> — доступ из любой точки мира, не нужна установка и серверы.</li>
-                  <li><b class="font-semibold text-ink">Прозрачность</b> — каждый этап и сумма видны, ошибки ручного пересчёта исключены.</li>
-                  <li><b class="font-semibold text-ink">Масштабируемость</b> — подходит и небольшой компании, и сети организаций.</li>
-                  <li><b class="font-semibold text-ink">Экономия времени</b> — автоматические сверки, готовые отчёты и экспорт в Excel/PDF.</li>
-                </ul>
-              </details>
-            </div>
-          </div>
-
           <!-- ===================== DORI.PRO ===================== -->
           <div v-if="activeProject === 'dori'">
             <h2 class="text-2xl font-medium tracking-tight text-ink lg:text-3xl">Dori.pro — система управления аптечной сетью</h2>
